@@ -1,0 +1,5 @@
+1. while moving to real framework from POC, we need to have attributes to hold the details of objects.
+Because going formward if we wish to have new parameters for objects, it will result in adding new columns and that will be a structural change in the tables
+
+2. So for the third table (material_worker), material ID can be the primary key, because one material can be owned by one worker
+only. But what if W1 wants to hold the material for half day and W2 wants to hold the material for half day.

@@ -36,5 +36,5 @@ create table material_worker (
 	  REFERENCES material_objects(material_object_id),
 	CONSTRAINT fk_matworker_workerobject
       FOREIGN KEY(worker_object_id)
-	  REFERENCES worker_objects(worker_object_id),
+	  REFERENCES worker_objects(worker_object_id)
 );
