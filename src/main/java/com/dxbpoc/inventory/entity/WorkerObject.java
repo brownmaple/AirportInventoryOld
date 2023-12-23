@@ -1,4 +1,4 @@
 package com.dxbpoc.inventory.entity;
 
-public class MaterialObjectTypes {
+public class WorkerObject {
 }
