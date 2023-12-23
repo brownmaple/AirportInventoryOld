@@ -42,4 +42,5 @@ create table material_worker (
 --need to create a view to join tables and calculate some columns (status of materials) data for the pages
 
 insert into material_object_types values(101,'dummy',null,null);
+insert into material_object_types values(102,'dummy1',null,null);
 insert into material_objects values(201,'dummy object',null,101,null);
