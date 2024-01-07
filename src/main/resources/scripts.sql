@@ -41,6 +41,16 @@ create table material_worker (
 
 --need to create a view to join tables and calculate some columns (status of materials) data for the pages
 
-insert into material_object_types values(101,'dummy',null,null);
-insert into material_object_types values(102,'dummy1',null,null);
-insert into material_objects values(201,'dummy object',null,101,null);
+insert into ai_material_type values(101,null,'irondoor',null);
+insert into ai_material_type values(102,null,'laptop',null);
+insert into ai_material_type values(103,null,'toolbox',null);
+insert into ai_material_type values(104,null,'camera',null);
+insert into ai_material_type values(105,null,'keys',null);
+insert into ai_material_type values(106,null,'ladder',null);
+
+insert into ai_material values(201,null,'hp',102,null);
+insert into ai_material values(202,null,'lenovo',102,null);
+insert into ai_material values(203,null,'asus',102,null);
+insert into ai_material values(204,null,'dell',102,null);
+insert into ai_material values(205,null,'nikon',104,null);
+insert into ai_material values(206,null,'sony',104,null);

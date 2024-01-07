@@ -1,0 +1,19 @@
+server:
+#  servlet:
+#    context-path: /v1/material
+  port: 8080
+  
+spring:
+  sql:
+    init: 
+      mode: always
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://localhost:5432/brownmaple_db
+    password: brownmaple
+    username: brownmaple
