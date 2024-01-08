@@ -17,7 +17,7 @@ public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="job_id")
-    private Long id;
+    private Long jobId;
 
     @Column(name="worker_id")
     private Long workerId;
@@ -26,5 +26,8 @@ public class Job {
     private Long materialId;
 
     @Column(name="job_description")
-    private String desc;
+    private String jobDescription;
+
+    @Column(name="job_status")
+    private String status;
 }
