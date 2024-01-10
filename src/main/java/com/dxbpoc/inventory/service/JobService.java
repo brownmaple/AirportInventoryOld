@@ -6,7 +6,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface JobService {
-    public JobResponse reserve(JobDto jobDto);
-    public JobResponse unreserve(JobDto jobDto);
-    public void getPocTest();
+    JobResponse reserve(JobDto jobDto);
+    JobResponse unreserve(JobDto jobDto);
+    void getPocTest();
 }
+

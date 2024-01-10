@@ -31,3 +31,4 @@ public class Job {
     @Column(name="job_status")
     private String status;
 }
+

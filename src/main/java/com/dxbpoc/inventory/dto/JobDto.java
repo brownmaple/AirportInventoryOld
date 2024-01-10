@@ -21,3 +21,4 @@ public class JobDto {
     private Long materialId;
 
 }
+
