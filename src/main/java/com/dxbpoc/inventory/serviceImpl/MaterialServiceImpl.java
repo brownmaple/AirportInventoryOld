@@ -35,10 +35,12 @@ public class MaterialServiceImpl implements MaterialService {
     }
 
     @Override
-    public List<MaterialDto> getMaterials(Long materialTypeId) {
+    public List<MaterialDto> getMaterials(Long materialTypeId, String status) {
         List<Material> materials = materialRepo.findAll();
         List<Material> materialsFiltered = materials
-                .stream().filter(material -> material.getObjectTypeId().equals(materialTypeId)).collect(Collectors.toList());
+                .stream()
+                .filter(material -> material.getObjectTypeId().equals(materialTypeId) && material.getStatus().equals(status))
+                .collect(Collectors.toList());
 
         return materialsFiltered.stream().map(material -> {
             MaterialDto materialDto = new MaterialDto();
@@ -47,6 +49,7 @@ public class MaterialServiceImpl implements MaterialService {
             materialDto.setDesc(material.getDesc());
             materialDto.setName(material.getName());
             materialDto.setParentId(material.getParentId());
+            materialDto.setStatus(material.getStatus());
             return materialDto;
         }).collect(Collectors.toList());
     }

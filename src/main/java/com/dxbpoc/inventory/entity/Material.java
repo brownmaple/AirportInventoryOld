@@ -25,6 +25,9 @@ public class Material {
     @Column(name="material_parent")
     private Long parentId;
 
+    @Column(name="material_status")
+    private String status;
+
     @Column(name="material_type_id")
     private Long objectTypeId;
 

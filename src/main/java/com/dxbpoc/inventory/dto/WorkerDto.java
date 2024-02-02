@@ -3,11 +3,10 @@ package com.dxbpoc.inventory.dto;
 import lombok.Data;
 
 @Data
-public class MaterialDto {
+public class WorkerDto {
     private Long id;
     private String name;
     private Long parentId;
-    private String desc;
     private Long objectTypeId;
-    private String status;
+    private String desc;
 }

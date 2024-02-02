@@ -10,5 +10,5 @@ import java.util.List;
 public interface MaterialService {
     public List<MaterialTypeDto> getAllMaterialTypes();
 
-    public List<MaterialDto> getMaterials(Long materialTypeId);
+    public List<MaterialDto> getMaterials(Long materialTypeId, String status);
 }
