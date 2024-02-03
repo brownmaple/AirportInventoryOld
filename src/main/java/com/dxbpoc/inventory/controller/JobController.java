@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/v1/material")
+@RequestMapping(value = "/v1/job")
 //@Tag(name = "Job to reserve or unreserve", description = "Job to reserve or unreserve")
 public class JobController {
 
@@ -17,18 +17,21 @@ public class JobController {
     JobServiceImpl jobService;
 
     @GetMapping("/test")
+    @CrossOrigin
     public void getPocDetails() {
         log.info("inside job controller");
         jobService.getPocTest();
     }
 
     @PostMapping("/reserve")
+    @CrossOrigin
     public JobResponse materialReserve(@RequestBody JobDto jobDto) {
         log.info("inside materialReserve");
         return jobService.reserve(jobDto);
     }
 
     @PostMapping("/unreserve")
+    @CrossOrigin
     public JobResponse materialUnreserve(@RequestBody JobDto jobDto) {
         log.info("inside materialUnreserve");
         return jobService.unreserve(jobDto);
